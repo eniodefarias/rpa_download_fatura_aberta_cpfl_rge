@@ -38,7 +38,7 @@ Vídeo ilustrativo do passo a passo do processo feito manualmente
 
 Para facilitar o uso deste projeto, foi utilizado o Makefile.
 
- - para cesso ao help do make basta usar o comando abaixo
+ - para acesso ao help do make basta usar o comando abaixo
 	- ```bash
 		make help
 		```

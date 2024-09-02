@@ -101,6 +101,32 @@ Para facilitar o uso deste projeto, foi utilizado o Makefile.
 
 ***
 
+# Melhorias para o futuro
+
+Como todo MVP, este projeto em sua versão 0.0.1 está funcional e cumpre com os requisitos básicos propostos no briefing, porém ainda há oportunidades para melhorias:
+
+ - melhorar o tratamento e captura na falha de usuário ou senha incorreta
+
+ - adicionar opção para localizar e baixar segunda via de faturas anteriores
+
+ - criar persistencia de logs em arquivo
+
+ - criar alarmes e sinalização ao desenvolvedor e equipe de suporte (dashboard ou email) sobre erros ocorridos
+
+ - utilizar fastapi para criar rotas de endpoint para realizar a extração via api atraves de um frontend web
+	- e documentar a api via swagger
+
+ - desenvolver um frontend web para o usuário inserir seus dados
+
+ - criar uma interface de loginautenticação para o usuário realizar o login e salvar suas credencias de usuário da CPF e assim não precisar inserir seus dados toda vez
+
+ - implementar banco de dados de para guardar os dados, arquivos, e informações das faturas e credenciais(criptografadas)
+
+ - criar token para cada solicitação de extração e responder via api, para consulta posterior após o processo finalizar
+
+ - implentar sinalização de cada etapa do processo, tempo decorrido, status e dados da fatura atrelado ao token para ser consultado via api
+
+ - tornar o projeto em um serviço web api para poder hospedá-lo em um server/cloud
 
 # Sugestão de dicas e boas práticas
 
@@ -109,6 +135,9 @@ fontes:
  - https://makefiletutorial.com/
 
  -
+
+
+
 
 
 ## dicas para um bom Dockerfile:

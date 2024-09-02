@@ -89,6 +89,7 @@ class DriverFactory:
         self,
         type="chrome",
         uctype=False,
+        # uctype=True,
         headless=False,
         path_to_download="TMP",
         install_extension=None,
@@ -103,8 +104,8 @@ class DriverFactory:
         senha_cert_digital=None,
         list_url_cert_digital=[],
         scale_factor=1,
-        set_page_load_timeout=45,
-        implicitly_wait=2,
+        set_page_load_timeout=55,
+        implicitly_wait=3,
         posX=0,
         posY=0,
     ):

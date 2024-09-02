@@ -10,7 +10,7 @@ import utilities.driversfactory
 # from selenium import webdriver
 # from selenium.common.exceptions import NoSuchElementException
 # from selenium.webdriver.common.action_chains import ActionChains
-# from selenium.webdriver.common.by import By
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support import (
     expected_conditions as EC,  # available since 2.26.0
 )
@@ -31,7 +31,10 @@ class Process_Webdriver:
 
     def __init__(self, logger):
         self.logger = logger
-        self.btn_login = '(//a[@href="/b2c-auth/login"])[1]'
+        # self.btn_login = '(//a[@href="/b2c-auth/login"])[1]'
+        # self.btn_login = '//a[@href="/b2c-auth/login"][contains(text(),"Entrar")]'
+        self.btn_login = '//a[contains(text(),"Entrar")]'
+
         self.input_user = '//input[@id="signInName"]'
         self.input_passwd = '//input[@id="password"]'
         self.btn_entrar = '//button[@id="next"]'
@@ -357,7 +360,7 @@ class Process_Webdriver:
             raise
 
     def create_driver(
-        self, headless=False, dir_download="var/download/", altura=1000, largura=1000, kiosk=False
+        self, headless=False, dir_download="var/download/", altura=1200, largura=1000, kiosk=False
     ):
         # logger = get_run_logger()
         try:
@@ -381,6 +384,7 @@ class Process_Webdriver:
                 robo_pid_exec=os.getpid(),
                 logger=None,
                 scale_factor=0.8,
+                # scale_factor=1,
                 posX=30,
                 posY=1050,
             )
@@ -414,8 +418,14 @@ class Process_Webdriver:
 
         self.logger.info(f"abrindo url {url}")
         driver.get(url)
+        time.sleep(1)
+        # driver.get(f"{url}/b2c-auth/login")
 
-        if self.clicar_xpath(driver=driver, xpath=self.btn_login, tempo=2, loop=9):
+        # self.clicar_xpath(driver=driver, xpath="//BUTTON[@id='onetrust-accept-btn-handler']", tempo=5, loop=5)
+        # time.sleep(1)
+
+        if self.clicar_xpath(driver=driver, xpath=self.btn_login, tempo=5, loop=5):
+            # if True:
             self.logger.info(f"clicou no btn login")
             if self.digitar_input_xpath(
                 driver=driver, xpath=self.input_user, texto=user, tempo=1, loop=3

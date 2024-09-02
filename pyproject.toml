@@ -1,0 +1,12 @@
+[tool.black]
+line-length = 100
+preview = true
+
+[tool.isort]
+profile = "black"
+
+[tool.autoflake]
+check-diff = true
+recursive = true
+remove-unused-variables = true
+remove-all-unused-imports = true

@@ -27,7 +27,9 @@ Automação RPA para realizar o download da fatura em aberto da CPFL Energia RGE
 
 [Vídeo ilustrativo do passo a passo do processo feito manualmente](https://youtu.be/PYVG9_tBFS8?si=H8bF3v-Vpvky62b5)
 
+## Apresentação
 
+[Vídeo mostrando o funcionamento do projeto](https://youtu.be/rB_jHjOZD0Q?si=CGCibgonwwPqxq98)
 
 ## Depêndencias
 

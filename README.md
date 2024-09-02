@@ -92,7 +92,7 @@ Para facilitar o uso deste projeto, foi utilizado o Makefile.
 
  - execute o conteiner do projeto
 	- ```bash
-		make run
+		make run user="usuario" passwd="senha" instalacao="numdaintalacao"
 		```
  - recupere seu arquivo baixado no diretorio:
     - var/download/

@@ -46,7 +46,7 @@ stop:			# para o container docker local
 	docker container stop "$(PROJECT)-$(ENV)"
 	@echo "Encerrador conteiner: $(PROJECT)-$(ENV)"
 
-run:			# executa o container docker local
+run:			# executa o container docker local, use assim: make run user="usuario" passwd="senha" instalacao="numdaintalacao"
 	@docker run -it --rm -p 8000:8000 --name "$(PROJECT)-$(ENV)" -v $(shell pwd)/var/:/app/var -e VUSER="$(user)" -e VPASSWD="$(passwd)" -e VINSTALACAO="$(instalacao)"  "$(PROJECT)-$(ENV)-$(VERSION)"
 
 
